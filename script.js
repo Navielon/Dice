@@ -60,7 +60,7 @@ btnHold.addEventListener('click', function () {
     totalScores[activePlayer];
 
   // Если очки активного игрока >= 100 то игрок выиграл, если нет, переходит к другому игроку
-  if (totalScores[activePlayer] >= 10) {
+  if (totalScores[activePlayer] >= 100) {
     isPlaying = false;
     document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
     document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
