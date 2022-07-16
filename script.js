@@ -11,9 +11,7 @@ const btnHold = document.querySelector('.btn--hold');
 const player0Element = document.querySelector('.player--0');
 const player1Element = document.querySelector('.player--1');
 // Изначальные условия игры
-score0Element.textContent = 0;
-score1Element.textContent = 0;
-diceElement.classList.add('hidden');
+
 
 //  Текущие очки
 let totalScores, currentScore, activePlayer, isPlaying;
