@@ -16,12 +16,26 @@ score1Element.textContent = 0;
 diceElement.classList.add('hidden');
 
 //  Текущие очки
-const totalScores = [0, 0]; // Для двух игроков
-let currentScore = 0;
-let activePlayer = 0;
+let totalScores, currentScore, activePlayer, isPlaying;
 
+const initGame = function () {
+  totalScores = [0, 0]; // Для двух игроков
+  currentScore = 0;
+  activePlayer = 0;
+  isPlaying = true;
+  current1Element.textContent = 0;
+  current0Element.textContent = 0;
+  score0Element.textContent = 0;
+  score1Element.textContent = 0;
+  player0Element.classList.remove('player--active');
+  player1Element.classList.remove('player--active');
+  player0Element.classList.remove('player--winner');
+  player1Element.classList.remove('player--winner');
+  player0Element.classList.add('player--active');
+  diceElement.classList.add('hidden');
+};
+initGame();
 // Переменная процесса игры
-let isPlaying = true;
 
 // Функция переключения активного игрока
 const switchActivePlayer = function () {
@@ -53,20 +67,37 @@ btnRoll.addEventListener('click', function () {
 });
 
 btnHold.addEventListener('click', function () {
-   if (isPlaying) {
-  // Добавить очки к текущим очкам активного игрока
-  totalScores[activePlayer] += currentScore;
-  document.getElementById(`score--${activePlayer}`).textContent =
-    totalScores[activePlayer];
+  if (isPlaying) {
+    // Добавить очки к текущим очкам активного игрока
+    totalScores[activePlayer] += currentScore;
+    document.getElementById(`score--${activePlayer}`).textContent =
+      totalScores[activePlayer];
 
-  // Если очки активного игрока >= 100 то игрок выиграл, если нет, переходит к другому игроку
-  if (totalScores[activePlayer] >= 100) {
-    isPlaying = false;
-    document.querySelector(`.player--${activePlayer}`).classList.add('player--winner');
-    document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
-   diceElement.classList.add('hidden');
-   } else {
-    switchActivePlayer();
+    // Если очки активного игрока >= 100 то игрок выиграл, если нет, переходит к другому игроку
+    if (totalScores[activePlayer] >= 100) {
+      isPlaying = false;
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.add('player--winner');
+      document
+        .querySelector(`.player--${activePlayer}`)
+        .classList.remove('player--active');
+      diceElement.classList.add('hidden');
+    } else {
+      switchActivePlayer();
+    }
   }
-}
 });
+
+btnNew.addEventListener('click', initGame);
+// totalScores = [0, 0]; // Для двух игроков
+// diceElement.classList.add('hidden');
+// activePlayer = 0;
+// current0Element.textContent = 0;
+// current1Element.textContent = 0;
+// score0Element.textContent = 0;
+// score1Element.textContent = 0;
+// player0Element.classList.add('player--active');
+// player1Element.classList.remove('player--active');
+// player0Element.classList.remove('player--winner');
+// player1Element.classList.remove('player--winner');
