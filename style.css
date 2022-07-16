@@ -12,28 +12,36 @@ html {
 body {
   font-family: 'Play', sans-serif;
   font-weight: 400;
-  height: 100vh;
   color: #000;
-  background-image: linear-gradient(to top right, #e2b810 0%, #ec3b05 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-repeat: no-repeat;
+
 }
 
 /* Layout */
 main {
-  position: relative;
-  width: 100rem;
-  height: 60rem;
-  background-color: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(200px);
-  filter: blur();
-  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-  border-radius: 9px;
-  overflow: hidden;
-  display: flex;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
-
+.content{
+   position: relative;
+   width: 120rem;
+   height: 100vh;
+   background-color: rgba(255, 255, 255, 0.35);
+   filter: blur();
+   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+   border-radius: 9px;
+   display: flex;
+   margin-top: 50px;
+   margin-bottom: 50px;
+}
+@media (max-width: 650px){
+   .content{
+      box-shadow: none;
+      background-color: none;
+   }
+}
 .player {
   flex: 50%;
   padding: 9rem;
@@ -52,6 +60,7 @@ main {
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+  width: 159px;
 }
 
 .score {
@@ -62,7 +71,8 @@ main {
 }
 
 .player--active {
-  background-color: rgba(255, 255, 255, 0.4);
+   background: rgba(255, 255, 255, 0.534);
+   
 }
 .player--active .name {
   font-weight: 700;
@@ -102,7 +112,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #444;
+  color: #424242;
   background: none;
   border: none;
   font-family: inherit;
@@ -111,15 +121,12 @@ main {
   cursor: pointer;
   font-weight: 400;
   transition: all 0.2s;
-
-  background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-
-  padding: 0.7rem 2.5rem;
+  background-image: linear-gradient(to right, #fad8c5 0%, #f5cad2 100%);
+  padding: 7px 20px 15px 20px;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
+
 
 .btn::first-letter {
   font-size: 2.4rem;
@@ -129,12 +136,31 @@ main {
 
 .btn--new {
   top: 3rem;
+ width: 200px;
+}
+.new__text{
+   display: inline-block;
+   margin-top: 5px;
+   margin-left: 30px;
 }
 .btn--roll {
   top: 40rem;
+  width: 200px;
+}
+.roll__text{
+   display: inline-block;
+   margin-top: 5px;
+   margin-left: 28px;
 }
 .btn--hold {
   top: 46rem;
+  width: 175px;
+
+}
+.hold__text{
+   display: inline-block;
+   margin-top: 5px;
+   margin-left: 28px;
 }
 
 .btn:active {
@@ -165,4 +191,25 @@ main {
 
 .hidden{
    display: none;
+}
+
+.rocket{
+   position: absolute;
+   left: 25px;
+   width: 25px;
+}
+
+.dice__roll{
+   position: absolute;
+   left: 10px;
+   top: 5px;
+   width: 35px;
+}
+
+.check__hold{
+   position: absolute;
+   left: 7px;
+   top: -5px;
+   width: 55px;
+   color: #e2b3a0;
 }
