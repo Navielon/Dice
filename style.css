@@ -18,7 +18,7 @@ body {
 
 }
 
-/* Layout */
+
 main {
    display: flex;
    align-items: center;
@@ -33,13 +33,15 @@ main {
    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
    border-radius: 9px;
    display: flex;
-   margin-top: 50px;
-   margin-bottom: 50px;
+   margin: 50px;
 }
-@media (max-width: 650px){
+@media (max-width: 650px) {
    .content{
       box-shadow: none;
       background-color: none;
+   }
+   body{
+      background: #9fc6e6;
    }
 }
 .player {
@@ -51,7 +53,6 @@ main {
   transition: all 0.75s;
 }
 
-/* Elements */
 .name {
   position: relative;
   font-size: 4rem;
@@ -107,7 +108,7 @@ main {
   font-size: 3.5rem;
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
+
 .btn {
   position: absolute;
   left: 50%;
