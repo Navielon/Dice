@@ -5,32 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
     <title>Кости</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="users">
+          <ul class="users__list">
+            <li class="users__item"></li>
+            <li class="users__item"></li>
+            <li class="users__item"></li>
+            <li class="users__item"></li>
+          </ul>
+        </div>
+        <div class="login">
+          <a target="_blank" href="login.html" class="login__link"
+            >авторизация</a
+          >
+        </div>
+      </div>
+    </header>
     <main>
       <div class="content">
-         <section class="player player--0 player--active">
-            <h2 class="name" id="name--0">Игрок 1</h2>
-            <p class="score" id="score--0">47</p>
-            <div class="current">
-              <p class="current-label">Текущие очки</p>
-              <p class="current-score" id="current--0">0</p>
-            </div>
-          </section>
-          <section class="player player--1">
-            <h2 class="name" id="name--1">Игрок 2</h2>
-            <p class="score" id="score--1">31</p>
-            <div class="current">
-              <p class="current-label">Текущие очки</p>
-              <p class="current-score" id="current--1">0</p>
-            </div>
-          </section>
-    
-          <img src="dice1.png" alt="Playing dice" class="dice" />
-          <button class="btn btn--new"><img src="rocket.svg" alt="rocket" class="rocket"> <span class="new__text">Новая игра</span></button>
-          <button class="btn btn--roll"><img src="dice__roll.svg" alt="dice__roll" class="dice__roll"> <span class="roll__text">Бросить кубик</span></button>
-          <button class="btn btn--hold"><img src="check.svg" alt="check" class="check__hold"> <span class="hold__text"> Оставить</span></button>
+        <section class="player player--0 player--active">
+          <h2 class="name" id="name--0">Игрок 1</h2>
+          <p class="score" id="score--0">47</p>
+          <div class="current">
+            <p class="current-label">Текущие очки</p>
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <h2 class="name" id="name--1">Игрок 2</h2>
+          <p class="score" id="score--1">31</p>
+          <div class="current">
+            <p class="current-label">Текущие очки</p>
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
+
+        <img src="dice1.png" alt="Playing dice" class="dice" />
+        <button class="btn btn--new">
+          <img src="rocket.svg" alt="rocket" class="rocket" />
+          <span class="new__text">Новая игра</span>
+        </button>
+        <button class="btn btn--roll">
+          <img src="dice__roll.svg" alt="dice__roll" class="dice__roll" />
+          <span class="roll__text">Бросить кубик</span>
+        </button>
+        <button class="btn btn--hold">
+          <img src="check.svg" alt="check" class="check__hold" />
+          <span class="hold__text"> Оставить</span>
+        </button>
       </div>
     </main>
     <script src="script.js"></script>
