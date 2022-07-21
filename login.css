@@ -3,7 +3,7 @@
    padding:0;
    }
 body{
-   background:linear-gradient(-45deg,#00FFFF,#E73C7E,#23A6D5,#00FF00);background-size:400% 400%;position:relative;animation:change 10s ease-in-out infinite;
+   background:linear-gradient(-45deg,#0026ff,#E73C7E,#23A6D5,#b81cab);background-size:400% 400%;position:relative;animation:change 10s ease-in-out infinite;
 
 }
    .container{
@@ -34,8 +34,10 @@ body{
    transition:transform 1s;
    }
    .card-front,.card-back{
-   box-shadow:0 0 40px #ffffff;
+   box-shadow:0 0 40px #929292;
+   background-color: #ffffff79;
    border-radius: 20px;
+   border: 2px solid rgb(255, 255, 255);
    width:100%;
    height:100%;
    background-position:center;
