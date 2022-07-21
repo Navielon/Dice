@@ -52,7 +52,7 @@ btnRoll.addEventListener('click', function () {
     console.log(diceNumber);
     // Вывод числа на кость
     diceElement.classList.remove('hidden');
-    diceElement.src = `dice${diceNumber}.png`;
+    diceElement.src = `img/dice${diceNumber}.png`;
     // Если выпала единица, переход к следующему игроку
     if (diceNumber !== 1) {
       currentScore += diceNumber; // currentScore = currentScore + diceNumber;
